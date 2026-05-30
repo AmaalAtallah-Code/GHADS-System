@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amaal.ghads.controller.AdminDashboardController">
+    <right>
+        <VBox spacing="10.0" style="-fx-background-color: #2c3e50; -fx-padding: 20;" prefWidth="250.0">
+            <children>
+                <Label text="لوحة التحكم الإغاثية" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; -fx-padding: 0 0 20 0;"/>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showDashboard" styleClass="btn-nav" text="الرئيسية" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showOrganizations" styleClass="btn-nav" text="إدارة المؤسسات" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showFamilies" styleClass="btn-nav" text="سجلات العائلات" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showDistributions" styleClass="btn-nav" text="سجلات التوزيع العام" />                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsers" styleClass="btn-nav" text="إدارة الحسابات" />
+                <Separator prefWidth="200.0" style="-fx-padding: 20 0 10 0;" />
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleLogout" style="-fx-background-color: #c0392b; -fx-text-fill: white;" text="تسجيل الخروج" />
+            </children>
+        </VBox>
+    </right>
+    <center>
+        <StackPane fx:id="mainContent" prefHeight="600.0" prefWidth="750.0" style="-fx-background-color: #f5f6fa; -fx-padding: 20;">
+            <children>
+                <Label text="مرحباً بكِ في منظومة GHADS الإغاثية، الرجاء اختيار قائمة من اليمين للبدء." style="-fx-font-size: 16px; -fx-text-fill: #7f8c8d;" />
+            </children>
+        </StackPane>
+    </center>
+</BorderPane>

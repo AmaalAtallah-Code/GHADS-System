@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amaal.ghads.controller.DashboardController">
+    <content>
+        <VBox spacing="30.0" style="-fx-padding: 30px;">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <Label styleClass="title-label" text="لوحة الإحصائيات العامة والرقابة" />
+                        <Label text="نظرة شاملة على عمليات توزيع الإغاثة والمؤسسات الشريكة في القطاع" textFill="#7f8c8d" />
+                    </children>
+                </VBox>
+
+                <GridPane hgap="20.0" vgap="20.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="180.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="180.0" prefWidth="200.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="180.0" prefWidth="200.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="120.0" prefHeight="130.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="120.0" prefHeight="130.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+
+                        <VBox alignment="CENTER" style="-fx-background-color: #3498db; -fx-background-radius: 8px; -fx-padding: 15px;">
+                            <children>
+                                <Label text="🏢 المؤسسات الشريكة" textFill="WHITE" />
+                                <Label fx:id="lblTotalOrgs" text="0" textFill="WHITE">
+                                    <font><Font name="System Bold" size="36.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" style="-fx-background-color: #2ecc71; -fx-background-radius: 8px; -fx-padding: 15px;" GridPane.columnIndex="1">
+                            <children>
+                                <Label text="👥 المنسقين المعتمدين" textFill="WHITE" />
+                                <Label fx:id="lblTotalCoordinators" text="0" textFill="WHITE">
+                                    <font><Font name="System Bold" size="36.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" style="-fx-background-color: #9b59b6; -fx-background-radius: 8px; -fx-padding: 15px;" GridPane.columnIndex="2">
+                            <children>
+                                <Label text="👨‍👩‍👧‍👦 إجمالي العائلات المسجلة" textFill="WHITE" />
+                                <Label fx:id="lblTotalFamilies" text="0" textFill="WHITE">
+                                    <font><Font name="System Bold" size="36.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" style="-fx-background-color: #1abc9c; -fx-background-radius: 8px; -fx-padding: 15px;" GridPane.rowIndex="1">
+                            <children>
+                                <Label text="✅ عائلات مخدومة (استلمت)" textFill="WHITE" />
+                                <Label fx:id="lblFamiliesServed" text="0" textFill="WHITE">
+                                    <font><Font name="System Bold" size="36.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" style="-fx-background-color: #e74c3c; -fx-background-radius: 8px; -fx-padding: 15px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <children>
+                                <Label text="❌ عائلات غير مخدومة حتى الآن" textFill="WHITE" />
+                                <Label fx:id="lblFamiliesNotServed" text="0" textFill="WHITE">
+                                    <font><Font name="System Bold" size="36.0" /></font>
+                                </Label>
+                            </children>
+                        </VBox>
+
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </content>
+</ScrollPane>

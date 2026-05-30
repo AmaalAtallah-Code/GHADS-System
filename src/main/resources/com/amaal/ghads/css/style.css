@@ -1,0 +1,63 @@
+/* الثيم الفاتح الافتراضي للمنظومة */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f6f9; /* لون الخلفية العام مريح للعين */
+}
+
+/* تنسيق شاشة تسجيل الدخول وكروت الإحصائيات */
+.login-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 4);
+    -fx-padding: 30px;
+}
+
+/* التنسيق الأنيق لحقول الإدخال */
+.text-field, .password-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 12px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #007bff; /* يتغير للون الأزرق عند الكتابة */
+    -fx-background-color: #fafbfc;
+}
+
+/* الأزرار الأساسية (مثل تسجيل الدخول والحفظ) */
+.btn-primary {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* أزرار المسح والـ Reset */
+.btn-secondary {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #545b62;
+}
+
+/* العناوين الرئيسية */
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}

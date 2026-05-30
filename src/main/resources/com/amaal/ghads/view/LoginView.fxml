@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="700.0" spacing="20.0"
+      styleClass="root" stylesheets="@../css/style.css"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.amaal.ghads.controller.LoginController">
+
+    <children>
+        <VBox alignment="TOP_CENTER" maxWidth="400.0" spacing="15.0" styleClass="login-box">
+            <children>
+                <Label styleClass="title-label" text="منظومة GHADS الإنسانية" />
+                <Label text="نظام تنسيق وتوزيع Mساعدات في قطاع غزة" textFill="#6c757d">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+
+                <Region prefHeight="10.0" />
+
+                <VBox alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="اسم المستخدم:" />
+                        <TextField fx:id="usernameField" promptText="أدخل اسم المستخدم" />
+                    </children>
+                </VBox>
+
+                <VBox alignment="CENTER_LEFT" spacing="5.0">
+                    <children>
+                        <Label text="كلمة المرور:" />
+                        <PasswordField fx:id="passwordField" promptText="أدخل كلمة المرور" />
+                    </children>
+                </VBox>
+
+                <Region prefHeight="10.0" />
+
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" styleClass="btn-primary" text="تسجيل الدخول" />
+                        <Button fx:id="resetButton" mnemonicParsing="false" onAction="#handleReset" styleClass="btn-secondary" text="تفريغ الحقول" />
+                    </children>
+                </HBox>
+
+                <Label fx:id="errorLabel" textFill="RED" visible="false" />
+            </children>
+        </VBox>
+    </children>
+</VBox>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.amaal.ghads.controller.FamilyManagementController">    <children>
+        <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <Label styleClass="title-label" text="سجلات عائلات المستفيدين في قطاع غزة" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+                <FlowPane hgap="10.0" vgap="10.0">
+                    <children>
+                        <TextField fx:id="txtHouseholdName" promptText="اسم رب الأسرة" prefWidth="180.0" />
+                        <TextField fx:id="txtNationalId" promptText="رقم الهوية" prefWidth="150.0" />
+                        <TextField fx:id="txtPhone" promptText="رقم التواصل" prefWidth="120.0" />
+                        <TextField fx:id="txtLocation" promptText="مكان النزوح الحالي" prefWidth="120.0" />
+                        <TextField fx:id="txtFamilySize" promptText="عدد الأفراد" prefWidth="80.0" />
+                        <Button mnemonicParsing="false" onAction="#handleSaveFamily" styleClass="btn-primary" text="إضافة العائلة" />                    </children>
+                </FlowPane>
+                <TableView fx:id="tblFamilies" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colFamId" prefWidth="60.0" text="ID" />
+                        <TableColumn fx:id="colFamName" prefWidth="200.0" text="اسم رب الأسرة" />
+                        <TableColumn fx:id="colFamNational" prefWidth="150.0" text="رقم الهوية" />
+                        <TableColumn fx:id="colFamLocation" prefWidth="180.0" text="مكان النزوح" />
+                        <TableColumn fx:id="colFamSize" prefWidth="100.0" text="عدد الأفراد" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
